@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration page</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"type="text/css"href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js'%}"></script></script>
+  <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<form method="POST">
+				{%csrf_token%}
+				<div class="card-header bg-info text-center">resgristration page</div>
+				<div class="card-body">
+					<div class="form-group">
+					
+					<label >fristname</label>
+					<input type="capitaltext" name="fname" placeholder="enter firstname" class="form-control" required>
+				</div>
+				<div class="form-group">
+					
+					<label >lastname</label>
+					<input type="text" name="lastname" placeholder="enter lastname" class="form-control" required>
+				</div>
+				<div class="form-group">
+
+					<label for="username">username</label>
+					<input type="text" name="username" placeholder="enter username" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="rollnumber">roll number</label>
+					<input type="text" name="rollnos" placeholder="enter rollnumber" class="form-control bg-info text-light" required>
+					
+				</div>
+				<div class="form-group">
+					
+					<label for="email">emailid</label>
+					<input type="text" name="email" placeholder="enter email" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="password">password</label>
+					<input type="password" name="password" placeholder="enter password" class="form-control bg-info text-light" required>
+
+				</div>
+				<div class="form-group">
+					<label for="confirm password">confirm password</label>
+					<input type="password" name="password" placeholder="enter to confirm  password" class="form-control bg-info text-light" required>
+					
+				</div>
+				<div class="form-group">
+					
+					<label for="phn nmuber">phn number</label>
+					<input type="number" name="mobilenumber" placeholder="enter mobile number" class="form-control" required>
+				</div>
+				<input type="submit" name="login" class="form-control"required>
+				<!--<div class="card-footer bg-info">
+					<button class="btn btn-secondary">login</button>
+				</div>-->
+			</div>
+		</form>
+		</div>
+	
+	</div>
+</body>
+</html>
